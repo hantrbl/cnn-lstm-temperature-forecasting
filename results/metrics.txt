@@ -1,0 +1,36 @@
+================================================================================
+CNN-LSTM TEMPERATURE FORECASTING - METRICS
+================================================================================
+
+Dataset: Algiers, Algeria (2016-2024)
+Model: CNN-LSTM Hybrid
+Architecture: Conv1D(256) → MaxPool → LSTM(64) → Dense(32) → Dense(1)
+Parameters: 90,945
+Train: 80% | Validation: 10% | Test: 10%
+Variables: 5 (Temp, Pressure, Humidity, Wind, Dew)
+
+PERFORMANCE (Test Set):
+- RMSE: 1.94°C
+- MAE: ~1.26°C
+- Relative Error: 6.3%
+
+TEMPERATURE RANGES:
+- Actual: 8.44°C - 39.96°C
+- Predicted: 7.85°C - 32.25°C
+
+TRAINING:
+- Epochs: 50 (Early Stopping)
+- Batch Size: 32
+- Data Split: 80/10/10
+
+STRENGTHS:
+✓ Excellent RMSE for weather forecasting
+✓ Good seasonal pattern tracking
+✓ Efficient architecture
+
+LIMITATIONS:
+✗ Underestimates extreme heat (>35°C)
+✗ Test set contains unseen temperature records
+
+Date: April 30, 2024
+================================================================================
