@@ -17,7 +17,8 @@ Weather data from Algiers, Algeria
 - **Wind_Speed**: Average wind speed (m/s)
 - **Dew_Point**: Dew point temperature (°C)
 
-## Target Variable: **Air Temperature (°C)**
+## Target Variable: 
+**Air Temperature (°C)**
 
 ## Format
 - **Type**: Excel (.xlsx)
