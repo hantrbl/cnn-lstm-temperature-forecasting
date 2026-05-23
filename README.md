@@ -1,7 +1,7 @@
 # CNN-LSTM Temperature Forecasting
 Undergraduate final project done for a Bachelor's degree in Operational Research. 
 
-This project aims to predict the temperature in Algiers based on multivariate climate data, using a **hybrid CNN-LSTM neural network model** to capture both feature interactions and temporal dependencies.
+Accurate temperature forecasting has practical applications across energy planning, agriculture, and urban infrastructure. This project builds a hybrid CNN-LSTM model to forecast daily temperature in Algiers from multivariate climate data, achieving 1.94°C RMSE on an unseen test set. The model is lightweight (90K parameters), making it suitable for resource-constrained environments.
 
 **Key Features:**
 - Combines CNN for local pattern extraction with LSTM for temporal dependency modeling
@@ -134,9 +134,7 @@ Output: Temperature (°C)
 
 ### Why Extreme Temperatures Are Difficult
 
-The test set (2024) contains unprecedented heat records not present in the training data (2016-2022), which explains the slightly higher RMSE. Despite this difficult extrapolation, the model maintains an error of only 1.94°C.
-
- Neural networks typically struggle with extrapolation beyond their training range, leading to regression toward the mean. This is a known limitation, not a model failure.
+The test set (2024) contains unprecedented heat records not present in the training data (2016–2022), which explains the underestimation. This is a known limitation of neural networks when extrapolating beyond their training distribution. Proposed mitigations include a weighted loss function to penalize extreme temperature errors more heavily, and synthetic augmentation of extreme samples.
 
 
 ## Future Improvements
